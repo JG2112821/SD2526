@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sd2526/simuladados-frontend:5cd4f6f8869cb6e9a74d92135d350d0487ed7ab3
+        image: sd2526/simuladados-frontend:6728a9425ef3a61ebd9a3e1c76419661aea4558f
         ports:
         - containerPort: 80
         resources:

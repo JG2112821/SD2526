@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: simulator
-        image: sd2526/simuladados-simulator:5cd4f6f8869cb6e9a74d92135d350d0487ed7ab3
+        image: sd2526/simuladados-simulator:6728a9425ef3a61ebd9a3e1c76419661aea4558f
         env:
         - name: BACKEND_URL
           value: "http://backend-service:8000"
