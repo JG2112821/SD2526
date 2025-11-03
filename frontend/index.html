@@ -42,8 +42,11 @@
         // Dictionary to store markers for each athlete
         const athleteMarkers = {};
 
-        // Connect to the WebSocket
-        const socket = new WebSocket("ws://localhost:8000/ws");
+        // Dynamically create the WebSocket URL
+        const wsProtocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+        const wsHost = window.location.hostname;
+        const wsPort = 30001; // The NodePort of the backend service
+        const socket = new WebSocket(`${wsProtocol}//${wsHost}:${wsPort}/ws`);
         
 
         const maleIcon = L.icon({
