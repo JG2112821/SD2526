@@ -6,7 +6,7 @@ RUN pip install fastapi uvicorn[standard]
 
 # Copiar o código do backend
 WORKDIR /app
-COPY backend.py /app/backend.py
+COPY backend/backend.py /app/backend.py
 
 # Expor a porta 8000
 EXPOSE 8000

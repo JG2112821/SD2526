@@ -6,8 +6,8 @@ RUN pip install requests gpxpy
 
 # Copiar o código do simulador
 WORKDIR /app
-COPY simulator.py .
-COPY ../trail_route.gpx .
+COPY simulator/simulator.py .
+COPY simulator/trail_route.gpx .
 
 # Comando para iniciar o simulador
 CMD ["python", "simulator.py"]
