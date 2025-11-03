@@ -32,7 +32,7 @@ jobs:
       - name: Build and push Docker image for ${{ matrix.service }}
         uses: docker/build-push-action@v4
         with:
-          context: ./${{ matrix.service }}
+          context: . # Use the root directory as context for all builds
           file: ./${{ matrix.service }}/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/simuladados-${{ matrix.service }}:${{ github.sha }}
