@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 
 app = FastAPI()
+print("Backend started")
 # Allow CORS for the frontend
 app.add_middleware(
     CORSMiddleware,
