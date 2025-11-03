@@ -17,11 +17,3 @@ spec:
         image: sd2526/simuladados-frontend:0d8dfa1e2fd7f049822def93b6c07c02f0694196
         ports:
         - containerPort: 80
-        volumeMounts: 
-        - name: gpx-volume
-          mountPath: /usr/share/nginx/html/gpx/trail_route.gpx
-          subPath: trail_route.gpx
-      volumes: 
-      - name: gpx-volume
-        configMap:
-          name: gpx-data

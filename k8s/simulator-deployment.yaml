@@ -18,11 +18,3 @@ spec:
         env:
         - name: BACKEND_URL
           value: "http://backend-service:8000"
-        volumeMounts: 
-        - name: gpx-volume
-          mountPath: /app/trail_route.gpx
-          subPath: trail_route.gpx
-      volumes:
-      - name: gpx-volume
-        configMap:
-          name: gpx-data
