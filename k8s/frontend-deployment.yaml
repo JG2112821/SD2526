@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: sd2526/simuladados-frontend:latest
+        ports:
+        - containerPort: 80
+        volumeMounts: 
+        - name: gpx-volume
+          mountPath: /usr/share/nginx/html/gpx/trail_route.gpx
+          subPath: trail_route.gpx
+      volumes: 
+      - name: gpx-volume
+        configMap:
+          name: gpx-data

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simulator-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simulator
+  template:
+    metadata:
+      labels:
+        app: simulator
+    spec:
+      containers:
+      - name: simulator
+        image: sd2526/simuladados-simulator:latest
+        env:
+        - name: BACKEND_URL
+          value: "http://backend-service:8000"
+        volumeMounts: 
+        - name: gpx-volume
+          mountPath: /app/trail_route.gpx
+          subPath: trail_route.gpx
+      volumes:
+      - name: gpx-volume
+        configMap:
+          name: gpx-data
