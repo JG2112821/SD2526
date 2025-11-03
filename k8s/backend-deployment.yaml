@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: sd2526/simuladados-backend:b4feb6b6114e747855eb37c52df514531fe71504
+        image: sd2526/simuladados-backend:656df1cde3222ff0abe2daa7c424265dde1a17e6
         ports:
         - containerPort: 8000
         resources:
