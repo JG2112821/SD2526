@@ -4,7 +4,7 @@ import time
 import random
 import requests
 
-# Configuration
+# Configuration...
 INGESTION_ENDPOINT = "http://backend-service:8000/events"  
 GPX_FILE_PATH = "trail_route.gpx"  # Path to the GPX file
 ATHLETES = [
